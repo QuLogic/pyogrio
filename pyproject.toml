@@ -2,9 +2,7 @@
 requires = [
     "setuptools",
     "Cython>=0.29",
-    "versioneer[toml]==0.28",
-    # tomli is used by versioneer
-    "tomli; python_version < '3.11'",
+    "versioneer[toml]>=0.28",
 ]
 build-backend = "setuptools.build_meta"
 
@@ -32,7 +30,7 @@ dependencies = ["certifi", "numpy", "packaging"]
 
 [project.optional-dependencies]
 dev = ["cython"]
-test = ["pytest", "pytest-cov"]
+test = ["pytest"]
 benchmark = ["pytest-benchmark"]
 geopandas = ["geopandas"]
 
